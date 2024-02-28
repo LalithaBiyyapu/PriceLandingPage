@@ -47,6 +47,9 @@ document.getElementById('root').innerHTML = categories.map((item)=>
 var cart =[];
 
 function addtocart(a){
+     if(cart.length>7){
+        alert("The cart is full")
+        return ;}
     cart.push({...categories[a]});
     displaycart();
 }
